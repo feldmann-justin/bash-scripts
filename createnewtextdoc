@@ -1,0 +1,20 @@
+#!/bin/bash
+
+currdir="$(echo $PWD)"
+documentname="$currdir/newdoc.txt"
+duplicatectr=0
+
+echo "test worked yay2"
+
+if [ -f $documentname ]
+then
+    duplicatectr=$((duplicatectr+=1))
+    newfilename="newdoc$duplicatectr.txt"
+    touch $currdir$newfilename
+    echo "File successfully created!"
+    fi
+
+# PLEASE WORK FOR THE LOVE OF EVERYTHING HOLY
+# To execute, type "chmod +x createnewtextdoc"
+# +x means we want to make this file an executable
+
